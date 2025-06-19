@@ -1,0 +1,22 @@
+<div class="items-grid">
+  {{ range $key, $item := .Site.Data.items }}
+    <div class="item-card" id="item-{{ $key }}">
+      <div class="item-image">
+        <img src="{{ $item.img | relURL }}" alt="{{ $item.name }}" loading="lazy">
+      </div>
+      
+      <div class="item-content">
+        <h3>{{ $item.name }}</h3>
+        {{ with $item.subtitle }}<p class="subtitle">{{ . }}</p>{{ end }}
+        
+        <div class="description">
+          {{ $item.description | markdownify }}
+        </div>
+        
+        <div class="purchase-btn">
+          {{ $item.html | safeHTML }}
+        </div>
+      </div>
+    </div>
+  {{ end }}
+</div>

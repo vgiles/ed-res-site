@@ -1,0 +1,157 @@
+/* css variables */
+
+:root {
+    --bg-colour: rgb(242, 236, 213);
+    --accent-colour: rgb(252, 122, 0);
+    --sub-colour: rgb(170, 85, 5);
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+.heading {
+    h1 {
+        color: var(--accent-colour);
+        text-align: center;
+        font-size: 2rem;
+    }
+    h2 {
+        color: var(--sub-colour);
+        text-align: center;
+        font-size: 1.5rem
+    }
+}
+
+.logo {
+    display: block;
+    margin: 0 auto;
+    max-width: 40%;
+    /* text-align: center; */
+}
+
+.main-body {
+    h3 {
+        color: var(--sub-colour);
+        text-align: center;
+        font-size: 1.3rem;
+    }
+}
+/* Container Center Alignment */
+.items-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Grid Layout */
+.items-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  justify-items: center; /* Centers grid items */
+}
+
+/* Card Styles */
+.item-card {
+  width: 100%;
+  max-width: 350px;
+  background: white;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.item-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.item-image {
+  width: 100%;
+  aspect-ratio: 1;
+  overflow: hidden;
+}
+
+.item-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.item-card:hover .item-image img {
+  transform: scale(1.05);
+}
+
+.item-content {
+  padding: 1.5rem;
+}
+
+.item-content h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.25rem;
+  color: #333;
+}
+
+.subtitle {
+  color: #666;
+  font-style: italic;
+  margin: 0 0 1rem 0;
+}
+
+.description {
+  margin-bottom: 1.5rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+.purchase-btn a {
+  display: block;
+  padding: 10px 15px;
+  background: #3a7bd5;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+
+.purchase-btn a:hover {
+  background: #2c5fb3;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .items-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .item-card {
+    max-width: 100%;
+  }
+}
+
+/* Center the entire grid system */
+.items-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Grid container */
+.items-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  width: 100%;
+  max-width: 1200px; /* Adjust max width as needed */
+}
+
+/* Individual cards */
+.item-card {
+  width: 100%;
+  background: white;
+  /* Rest of your existing card styles */
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ .Title }} | {{ .Site.Title }}</title>
+  {{ $styles := resources.Get "css/main.css" | toCSS | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
+    <script async src="https://widget.trolley.link/cart.js" type="text/javascript"></script>
+</head>
+<body>
+{{ partial "heading.html" . }}  <!-- Reusable heading -->
+  <section id="logo">
+    <img src="{{ .Site.Params.logo }}" alt="Edition Resonance Logo" class="logo">
+  </section>
+  <section id="content" class="main-body">
+  <h3>
+    {{ .Site.Params.placeholder }}
+  </h3>
+  </section>
+  <section id="items">
+    {{ partial "item-card.html" . }}
+  </section>
+</body>
+</html>

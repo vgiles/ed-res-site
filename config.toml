@@ -1,0 +1,10 @@
+baseURL = 'https://edition-resonance.xyz/'
+languageCode = 'en-au'
+title = 'Edition Resonance'
+
+[params]
+    logo = 'img/resonance-edition-v2.svg'
+    subtitle = 'Fine Music Publishing, Melbourne Australia'
+    placeholder = 'New site coming soon. In the mean time, purchase a digital PDF of silver as catalyst in organic reactions below'
+
+

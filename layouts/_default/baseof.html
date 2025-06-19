@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ .Title }} | {{ .Site.Title }}</title>
+</head>
+<body>
+    <section id="heading">
+        <p>{{ .Site.Title }}</p>
+        <p>{{ .Site.Params.subtitle }} </p>
+    </section>
+  <section id="logo">
+    <img src="{{ .Site.Params.logo }}" alt="Edition Resonance Logo">
+  </section>
+  <section>
+    { block "main" . }}{{ end }} <!-- Required for child templates to inject content -->
+  </section>
+</body>
+</html>

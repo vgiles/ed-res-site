@@ -1,0 +1,14 @@
+[one]
+    html = '''
+    <a href="https://trolley.link/p/28WV2G2" data-trolley="true" data-tpk="28WV2G2">
+    Pay
+    </a>
+    '''
+    name = "Silver as Catalyst in Organic Reactions"
+    subtitle = "For Solo Violin"
+    description = """
+This piece marks a point in time in my compositional thinking when I was grappling with expanding notions of formal construction in music through intuition - a kind of shaping of raw material.
+
+Note that clicking pay will take you to an external site (trolley).
+    """
+    img = "items/ER-1/giles-silver-preview-2.png"  # Ensure this path is correct
